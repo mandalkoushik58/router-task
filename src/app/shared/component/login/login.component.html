@@ -1,0 +1,65 @@
+
+
+<div class="main forms">
+  <div class="card">
+    <div class="card-body">
+      <div class="loginform" *ngIf="alreadyHaveAccount" >
+        <h3>signIn form</h3>
+        <div class="input-group mb-3">
+          <input type="email" class="form-control" placeholder="email" aria-label="email" aria-describedby="basic-addon1">
+              <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">@</span>
+        </div>
+
+            <div class="input-group mb-3 mt-3">
+              <input type="password" class="form-control" placeholder="password" aria-label="password" aria-describedby="basic-addon2">
+                <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon2">@</span>
+             </div>
+          </div>
+
+
+         <div class="text-right">
+          <button class="btn btn-primary" (click)="login()">LogIn</button>
+      </div>
+    </div>
+  </div>
+    <div class="signupform" *ngIf="!alreadyHaveAccount">
+       <h3>create account </h3>
+       <div class="input-group mb-3">
+        <input type="email" class="form-control" placeholder="email" aria-label="email" aria-describedby="basic-addon1">
+
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">@</span>
+          </div>
+
+          <div class="input-group mb-3 mt-3">
+            <input type="password" class="form-control" placeholder="password" aria-label="password" aria-describedby="basic-addon2">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon2">@</span>
+              </div>
+             </div>
+
+          <div class="input-group mb-3 mt-3">
+            <input type="confirm password" class="form-control" placeholder="confirm password" aria-label="password" aria-describedby="basic-addon3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3">@</span>
+              </div>
+             </div>
+
+      </div>
+      <div class="text-right">
+        <button class="btn btn-primary" (click)="login()">sign up</button>
+    </div>
+
+</div>
+      <p *ngIf="alreadyHaveAccount">
+        <a href="javascript:;" (click)="alreadyHaveAccount = !alreadyHaveAccount"> dont have account?</a>
+      </p>
+      <p *ngIf="!alreadyHaveAccount" (click)="alreadyHaveAccount = !alreadyHaveAccount">
+        <a href="javascript:;" > already have account</a>
+      </p>
+
+      </div>
+    </div>
+  </div>

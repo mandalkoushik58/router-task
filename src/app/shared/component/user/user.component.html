@@ -1,0 +1,13 @@
+<p>user works!</p>
+
+  <div class="card">
+    <div class="card-body">
+      <p>the user name is <strong> {{userObj.userName}}</strong></p>
+      <p>and the userid is <strong>{{userObj.id}}</strong></p>
+      <hr>
+   <!---- <button class="btn btn-primary" [routerLink]="['/users',userObj.id,'edit']">edit user</button>
+     <a [routerLink]="['/users',3]"> load may</a>-->
+     <button class="btn btn-primary" (click)="goToeditUser()" >edit user</button>
+
+    </div>
+  </div>

@@ -1,0 +1,17 @@
+<p>users works!</p>
+
+ <div class="row">
+  <div class="col-md-4">
+    <ul class="list-group">
+      <li class="list-group-item"
+      [routerLink]="['/users',user.id]" [queryParams]="{userRole:user.userRole}"
+      *ngFor="let user of usersData">
+        {{user.userName}}
+      </li>
+    </ul>
+    <button class="btn btn-primary mt-3" routerLink="/products">go to product</button>
+  </div>
+  <div class="col-md-8">
+    <router-outlet></router-outlet>
+  </div>
+ </div>
